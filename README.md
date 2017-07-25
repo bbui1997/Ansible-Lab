@@ -81,7 +81,11 @@ Should be Python 2.7: `python -V`
 
 Should be Ansible 2.3+: `ansible --version`
 
+#### Successful Run
+Below is an example of what should happen if everything is done correctly.
 
+![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/example.png?raw=true)
+---
 ## Anatomy of Ansible
 #### Playbook
 Similar to a workflow in HPOO. Playbooks are what we run when using Ansible.
