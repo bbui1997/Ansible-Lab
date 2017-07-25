@@ -15,7 +15,6 @@ It is an automation engine that runs Ansible Playbooks (yml).
 
 When starting out with a fresh Linux machine, it isn't obvious how to get everything setup.
 
-Since the Ansible machine for ACMS is a RHEL 6 machine, the instructions below will be for RHEL 6 machines.
 #### Install Development Tools
 Development Tools include gcc, g++, make, libtool, rpmbuild, and autoconf. These are required to install other required software (using pip to install ansible). [Link here](https://tecadmin.net/install-development-tools-on-centos/)
 
