@@ -1,0 +1,50 @@
+# Ansible Lab
+
+# By the end of thiss lab, you will be to create a very simple playbook that will create an EC2 instance.
+
+# Pre-requisites
+# 1) Clone this repository (link here just in case) http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible
+# 2) Have a working installation of Ansible on your machine. Instructions to install are on the README for Windows and Linux.
+#       - Use either Windows Subsystem for Linux
+#       - Mac
+# 3) Have an existing VPC using the VPC wizard by choosing the first option "VPC with a Single Public Subnet"
+
+# Instructions:
+# Create a playbook on your local machine. Verify that the playbook works by checking the AWS Management Console to see if an EC2 instance has been created after running the playbook.
+
+# Notes:
+# 1) Use this Module: http://docs.ansible.com/ansible/latest/ec2_module.html Some of the work has already been done for you below.
+# 2) Use the VPC id of the VPC you created in Step 3 of the pre-requisites.
+# 3) Use this AMI: ami-a4c7edb2
+# 4) Use a t2.micro instance type.
+# 5) Create a tag for the EC2 instance and make the "Name" tag "<Your_Name>'s Instance".
+# 6) Try running the ansible-playbook command now. You're going to get an error that says something about AWS_accessKeyId being undefined.
+# 7.1) Add --extra-vars flag to your ansible command.
+#       a. It will be in this format: ansible-playbook -i hosts trainingLab.yml --extra-vars '{"AWS_accessKeyId":"<accessKey>","AWS_accessKey":"<secretKey>","AWS_region":"<region>"}'
+# 7.2) For your extra variables, use these values:
+#       a. AWS_accessKeyId: <your_accessKey>
+#       b. AWS_accessKey: <your_secretKey>
+#       c. AWS_region: us-east-1
+# 8) Check to see if it works by checking the AWS management console!
+
+# You may hard-code all of your values for this activity, with the exception of the access key, the secret key, and the region. Those must be set as --extra-vars.
+
+# In general, this is the command line structure for running Ansible:
+# ansible-playbook -i <inventory_file> (for us, will just be "hosts", which only contains localhost) <playbook_name> --extra-vars <extra vars in varying formats, in this case JSON>.
+---
+- hosts: localhost
+  connection: localhost
+  
+  tasks:
+    - name: Create EC2 Instance
+      # Finish this task by adding the vpc id, AMI, instance type, and tags
+      ec2:
+        aws_access_key: "{{ AWS_provider.access }}"
+        aws_secret_key: "{{ AWS_provider.secret }}"
+        region: "{{ AWS_provider.region }}"
+        instance_type: t2.micro
+        image: ami-a4c7edb2
+        vpc_subnet_id: subnet-f37dd2a9
+        instance_tags:
+            Name: Brandon's Instance
+    

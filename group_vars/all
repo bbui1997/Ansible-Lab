@@ -1,0 +1,6 @@
+# Variables
+
+AWS_provider:
+  access: "{{ AWS_accessKeyId }}"
+  secret: "{{ AWS_accessKey }}"
+  region: "{{ AWS_region }}"
