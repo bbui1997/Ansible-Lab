@@ -60,7 +60,9 @@ Ansible requires a Linux environment to be run. Windows released a beta where yo
 Follow this guide: https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
 
 #### Install Pip
-You are going to need pip, along with a whole bunch of other tools: `sudo apt-get -y install python-pip python-dev libffi-dev libssl-dev`
+You are going to need pip inside your WSL, along with a whole bunch of other tools: 
+- `bash` # Make sure you're in WSL
+- `sudo apt-get -y install python-pip python-dev libffi-dev libssl-dev`
 
 #### Install Ansible
 Install Ansible using this command: `sudo pip install ansible --user`
