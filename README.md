@@ -87,7 +87,7 @@ Below is an example of what should happen if everything is done correctly.
 
 ![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/example.png?raw=true)
 ---
-## Anatomy of Ansible
+## Extra Information - Anatomy of Ansible
 #### Playbook
 Similar to a workflow in HPOO. Playbooks are what we run when using Ansible.
 #### Inventory
