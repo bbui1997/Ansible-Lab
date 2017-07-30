@@ -1,6 +1,6 @@
 # Ansible Lab
-
-# By the end of thiss lab, you will be to create a very simple playbook that will create an EC2 instance.
+# Created by Brandon Bui
+# By the end of this lab, you will be to create a very simple playbook that will create an EC2 instance.
 
 # Pre-requisites
 # 1) Clone this repository (link here just in case) https://github.com/bbui1997/Ansible-Lab.git
