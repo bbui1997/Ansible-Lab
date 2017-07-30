@@ -3,7 +3,7 @@
 # By the end of thiss lab, you will be to create a very simple playbook that will create an EC2 instance.
 
 # Pre-requisites
-# 1) Clone this repository (link here just in case) http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible
+# 1) Clone this repository (link here just in case) https://github.com/bbui1997/Ansible-Lab.git
 # 2) Have a working installation of Ansible on your machine. Instructions to install are on the README for Windows and Linux.
 #       - Use either Windows Subsystem for Linux
 #       - Mac
@@ -14,8 +14,8 @@
 
 # Notes:
 # 1) Use this Module: http://docs.ansible.com/ansible/latest/ec2_module.html Some of the work has already been done for you below.
-# 2) Use the VPC id of the VPC you created in Step 3 of the pre-requisites.
-# 3) Use this AMI: ami-a4c7edb2
+# 2) Use the VPC subnet id of the VPC you created in Step 3 of the pre-requisites.
+# 3) Use this AMI (image): ami-a4c7edb2
 # 4) Use a t2.micro instance type.
 # 5) Create a tag for the EC2 instance and make the "Name" tag "<Your_Name>'s Instance".
 # 6) Try running the ansible-playbook command now. You're going to get an error that says something about AWS_accessKeyId being undefined.
@@ -41,10 +41,5 @@
       ec2:
         aws_access_key: "{{ AWS_provider.access }}"
         aws_secret_key: "{{ AWS_provider.secret }}"
-        region: "{{ AWS_provider.region }}"
-        instance_type: t2.micro
-        image: ami-a4c7edb2
-        vpc_subnet_id: subnet-f37dd2a9
-        instance_tags:
-            Name: Brandon's Instance
+        region: "{{ AWS_region }}"
     
