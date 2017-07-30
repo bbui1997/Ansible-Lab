@@ -15,7 +15,6 @@ It is an automation engine that runs Ansible Playbooks (yml).
 
 When starting out with a fresh Linux machine, it isn't obvious how to get everything setup.
 
-Since the Ansible machine for ACMS is a RHEL 6 machine, the instructions below will be for RHEL 6 machines.
 #### Install Development Tools
 Development Tools include gcc, g++, make, libtool, rpmbuild, and autoconf. These are required to install other required software (using pip to install ansible). [Link here](https://tecadmin.net/install-development-tools-on-centos/)
 
@@ -61,7 +60,9 @@ Ansible requires a Linux environment to be run. Windows released a beta where yo
 Follow this guide: https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
 
 #### Install Pip
-You are going to need pip, along with a whole bunch of other tools: `sudo apt-get -y install python-pip python-dev libffi-dev libssl-dev`
+You are going to need pip inside your WSL, along with a whole bunch of other tools: 
+- `bash` # Make sure you're in WSL
+- `sudo apt-get -y install python-pip python-dev libffi-dev libssl-dev`
 
 #### Install Ansible
 Install Ansible using this command: `sudo pip install ansible --user`
@@ -81,7 +82,11 @@ Should be Python 2.7: `python -V`
 
 Should be Ansible 2.3+: `ansible --version`
 
+#### Successful Run
+Below is an example of what should happen if everything is done correctly.
 
+![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/example.png?raw=true)
+---
 ## Anatomy of Ansible
 #### Playbook
 Similar to a workflow in HPOO. Playbooks are what we run when using Ansible.
