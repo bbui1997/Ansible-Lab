@@ -73,7 +73,7 @@ Steps listed below:
 
 It should look like this:
 
-![developerMode](http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible/raw/master/onboarding/developerFeatures.png)
+![developerMode](https://github.com/bbui1997/Ansible-Lab/blob/master/images/developerFeatures.png?raw=true)
 
 ##### Install Ubuntu
 1. Go to your command prompt.
@@ -85,7 +85,7 @@ It should look like this:
 #### Ansible Setup
 In this directory, there is a script that will install everything you need for Ansible.
 
-Run the script inside WSL with this command: `sudo ./newJoinerScript.sh`
+Run the script inside WSL with this command: `sudo ./setup_script.sh`
 
 This script contains these commands if you want to run them individually:
 - `sudo apt-get update`
@@ -99,11 +99,11 @@ This script contains these commands if you want to run them individually:
 #### End Result
 At the end of the script, or after typing `ansible` in the command prompt in WSL, you should see this (ignore the missing target hosts error, you'll learn what that means soon):
 
-![ansibleSuccess](http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible/raw/master/onboarding/ansibleSuccess.png)
+![ansibleSuccess](https://github.com/bbui1997/Ansible-Lab/blob/master/images/ansibleSuccess.png?raw=true)
 
 After typing `ansible --version` in the command prompt in WSL, you should see this:
 
-![ansibleVersionSuccess](http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible/raw/master/onboarding/ansibleVersionSuccess.png)
+![ansibleVersionSuccess](https://github.com/bbui1997/Ansible-Lab/blob/master/images/ansibleVersionSuccess.png?raw=true)
 
 #### Successful Run
 Below is an example of what should happen if everything is done correctly.
