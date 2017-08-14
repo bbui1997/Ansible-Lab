@@ -1,9 +1,7 @@
 #!/bin/bash
 # MAKE SURE YOU HAVE WINDOWS SUBSYSTEM FOR LINUX INSTALLED BEFORE YOU RUN THIS SCRIPT
-# RUN THIS SCRIPT INSIDE WINDOWS SUBSYSTEM FOR LINUX
-# ./newJoiner_script.sh
-# Please update this script if there are any dependencies you found to be required in Ansible.
-# This makes it easier to onboard newer members to the automation team.
+# RUN THIS SCRIPT INSIDE WINDOWS SUBSYSTEM FOR LINUX OR UBUNTU
+# sudo ./setup_script.sh
 echo "First, update apt-get"
 sudo apt-get update
 
