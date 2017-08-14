@@ -16,7 +16,7 @@ Ubuntu users simply run sudo ./setup_script.sh inside the setup folder.
 #### Successful Run
 Below is an example of what should happen if everything is done correctly.
 
-![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/example.png?raw=true)
+![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/images/example.png?raw=true)
 ---
 ## Extra Information - Anatomy of Ansible
 #### Playbook
