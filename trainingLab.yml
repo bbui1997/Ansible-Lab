@@ -5,7 +5,7 @@
 # Pre-requisites
 # 1) Clone this repository (link here just in case) https://github.com/bbui1997/Ansible-Lab.git
 # 2) Have a working installation of Ansible on your machine. Instructions to install are on the setup/README.md for Windows and CentOS Linux.
-# 3) Have an existing VPC using the VPC wizard by choosing the first option "VPC with a Single Public Subnet"
+# 3) Have an existing AWS VPC using the VPC wizard by choosing the first option "VPC with a Single Public Subnet"
 
 # Instructions:
 # Create a playbook on your local machine. Verify that the playbook works by checking the AWS Management Console to see if an EC2 instance has been created after running the playbook.
