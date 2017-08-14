@@ -9,7 +9,7 @@ Ansible is an open source automation language that can describe an IT applicatio
 It is an automation engine that runs Ansible Playbooks (yml).
 
 ## Setup
-There are guides to setup Ansible for CentOS machines and Windows machines here.
+There are guides to setup Ansible for CentOS machines and Windows machines ![here](https://github.com/bbui1997/Ansible-Lab/tree/master/setup).
 
 Ubuntu users simply run sudo ./setup_script.sh inside the setup folder.
 
