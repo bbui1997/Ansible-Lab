@@ -9,11 +9,11 @@ Ansible is an open source automation language that can describe an IT applicatio
 It is an automation engine that runs Ansible Playbooks (yml).
 
 --- 
-## System Setup for Linux (RHEL 6)
+## System Setup for Linux (CentOS)
 #### Prequisites
-- A fresh Linux machine
+- A fresh CentOS machine
 
-When starting out with a fresh Linux machine, it isn't obvious how to get everything setup.
+When starting out with a fresh CentOS machine, it isn't obvious how to get everything setup.
 
 #### Install Development Tools
 Development Tools include gcc, g++, make, libtool, rpmbuild, and autoconf. These are required to install other required software (using pip to install ansible). [Link here](https://tecadmin.net/install-development-tools-on-centos/)
@@ -57,30 +57,53 @@ We will be following this guide: https://www.jeffgeerling.com/blog/2017/using-an
 #### Install Windows Subsystem for Linux (WSL)
 Ansible requires a Linux environment to be run. Windows released a beta where you can access Ubuntu from your Windows machine.
 
-Follow this guide: https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
+Follow this guide to get WSL: https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
 
-#### Install Pip
-You are going to need pip inside your WSL, along with a whole bunch of other tools: 
-- `bash` # Make sure you're in WSL
-- `sudo apt-get -y install python-pip python-dev libffi-dev libssl-dev`
+Steps listed below:
 
-#### Install Ansible
-Install Ansible using this command: `sudo pip install ansible --user`
+##### Enable the Windows Subsystem for Linux feature
+1. Run Powershell as Administrator
+2. Run this command: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+3. Restart your computer when prompted.
 
-#### Install boto
-Install boto using these commands:
- - `sudo pip install boto`
- - `sudo pip install boto3`
+##### Turn on Developer Features
+1. Click on the Windows key and type 'developer features'.
+2. Click on 'Use developer features'.
+3. Select the option 'Developer mode'
 
-#### Update path variables
-`echo 'PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc`
+It should look like this:
 
-`source .bashrc`
+![developerMode](http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible/raw/master/onboarding/developerFeatures.png)
 
-#### Make sure you have correct versions of software
-Should be Python 2.7: `python -V`
+##### Install Ubuntu
+1. Go to your command prompt.
+2. Type `bash`.
+3. Go through the installation process.
+4. To get into WSL, from cmd or PowerShell, type `bash`.
 
-Should be Ansible 2.3+: `ansible --version`
+
+#### Ansible Setup
+In this directory, there is a script that will install everything you need for Ansible.
+
+Run the script inside WSL with this command: `sudo ./newJoinerScript.sh`
+
+This script contains these commands if you want to run them individually:
+- `sudo apt-get update`
+- `sudo apt-get -y install python-pip python-dev libffi-dev libssl-dev build-essential git;`
+- `sudo pip install pip --upgrade;`
+- `sudo pip install ansible --upgrade;`
+- `sudo chmod 777 -R $HOME/.ansible;`
+- `sudo pip install -U boto boto3 appdirs packaging 'azure==2.0.0rc5';`
+
+
+#### End Result
+At the end of the script, or after typing `ansible` in the command prompt in WSL, you should see this (ignore the missing target hosts error, you'll learn what that means soon):
+
+![ansibleSuccess](http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible/raw/master/onboarding/ansibleSuccess.png)
+
+After typing `ansible --version` in the command prompt in WSL, you should see this:
+
+![ansibleVersionSuccess](http://ec2-96-127-57-62.us-gov-west-1.compute.amazonaws.com/brandon.bui/ACMS-Ansible/raw/master/onboarding/ansibleVersionSuccess.png)
 
 #### Successful Run
 Below is an example of what should happen if everything is done correctly.
