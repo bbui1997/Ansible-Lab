@@ -13,7 +13,9 @@ There are guides to setup Ansible for CentOS machines and Windows machines ![her
 
 Ubuntu users simply run sudo ./setup_script.sh inside the setup folder.
 
-#### Successful Run
+## Training Lab
+Give a shot at the training lab (trainingLab.yml). If everything goes correctly, you should be able to create an EC2 instance using Ansible!
+
 Below is an example of what should happen if everything is done correctly.
 
 ![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/images/example.png?raw=true)
