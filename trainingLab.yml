@@ -18,10 +18,10 @@
 # 5) Create a tag for the EC2 instance and make the "Name" tag "<Your_Name>'s Instance".
 # 6) Try running the ansible-playbook command now. You're going to get an error that says something about AWS_accessKeyId being undefined.
 # 7.1) Add --extra-vars flag to your ansible command.
-#       a. It will be in this format: ansible-playbook -i hosts trainingLab.yml --extra-vars '{"AWS_accessKeyId":"<accessKey>","AWS_accessKey":"<secretKey>","AWS_region":"<region>"}'
+#       a. It will be in this format: ansible-playbook -i hosts trainingLab.yml --extra-vars '{"AWS_accessKeyId":"<accessKey>","AWS_secretKey":"<secretKey>","AWS_region":"<region>"}'
 # 7.2) For your extra variables, use these values:
 #       a. AWS_accessKeyId: <your_accessKey>
-#       b. AWS_accessKey: <your_secretKey>
+#       b. AWS_secretKey: <your_secretKey>
 #       c. AWS_region: us-east-1
 # 8) Check to see if it works by checking the AWS management console!
 
@@ -37,7 +37,7 @@
     - name: Create EC2 Instance
       # Finish this task by adding the vpc id, AMI, instance type, and tags
       ec2:
-        aws_access_key: "{{ AWS_provider.access }}"
-        aws_secret_key: "{{ AWS_provider.secret }}"
+        aws_access_key: "{{ AWS_accessKeyId }}"
+        aws_secret_key: "{{ AWS_secretKey }}"
         region: "{{ AWS_region }}"
     
