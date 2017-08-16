@@ -18,7 +18,7 @@ Give a shot at the training lab (trainingLab.yml). If everything goes correctly,
 
 Below is an example of what should happen if everything is done correctly.
 
-![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/images/labComplete.png?raw=true)
+![Success](https://github.com/bbui1997/Ansible-Lab/blob/master/images/completedLab.png?raw=true)
 ---
 ## Extra Information - Anatomy of Ansible
 #### Playbook
