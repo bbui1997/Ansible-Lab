@@ -2,8 +2,9 @@
 # MAKE SURE YOU HAVE WINDOWS SUBSYSTEM FOR LINUX INSTALLED BEFORE YOU RUN THIS SCRIPT
 # RUN THIS SCRIPT INSIDE WINDOWS SUBSYSTEM FOR LINUX OR UBUNTU
 # sudo ./setup_script.sh
-echo "First, update apt-get"
+echo "First, update and upgradeapt-get"
 sudo apt-get update
+sudo apt-get upgrade
 
 echo "Install pip and other development tools required to install Ansible"
 sudo apt-get -y install python-pip python-dev libffi-dev libssl-dev build-essential git;
