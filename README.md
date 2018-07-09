@@ -22,7 +22,7 @@ Below is an example of what should happen if everything is done correctly.
 ---
 ## Extra Information - Anatomy of Ansible
 #### Playbook
-Similar to a workflow in HPOO. Playbooks are what we run when using Ansible.
+Playbooks are what we run when using Ansible.
 #### Inventory
 A file that contains hosts and groups.
 #### Groups
